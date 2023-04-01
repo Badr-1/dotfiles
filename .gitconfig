@@ -1,0 +1,17 @@
+[alias]
+    # Simple Aliases
+    lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lola = lol --all
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    # undo = reset HEAD~1 --mixed 
+    # undo = reset --hard HEAD@{1} 
+    # Advance Aliases 
+    save = !git add -A && git commit -m
+    done = !git push -u origin HEAD
+    ours = !git checkout --ours $@ && git add $@
+    theirs = !git checkout --theirs $@ && git add $@
+    # Really Advance Aliases 
+    repos = !repos
+    # loglive = !"sh -c 'watch -n1 "git --no-pager lola"'" 
+    # loglive = !"sh -c 'while :; do clear; git --no-pager lola $*; sleep 1; done'"
