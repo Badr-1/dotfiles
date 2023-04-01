@@ -1,0 +1,52 @@
+# ~/.config/starship.toml
+
+[git_branch]
+symbol = '🌱 '
+truncation_symbol = ''
+
+[git_commit]
+tag_symbol = '🔖 '
+
+[git_metrics]
+disabled = false
+
+[git_state]
+rebase = '🏗  REBASING '
+merge = '🔀  MERGING '
+revert = '⏪️  REVERTING '
+cherry_pick = '🍒  CHERRY-PICKING '
+bisect = '🔎  BISECTING '
+style = 'bold cyan'
+
+[git_status]
+untracked = '❓'
+stashed = '📦'
+modified = '📝'
+renamed = '🚚'
+deleted = '🔥'
+staged = '➕'
+conflicted = '😱'
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+
+[[battery.display]] # 'bold red' style and discharging_symbol when capacity is between 0% and 10%
+threshold = 10
+style = 'bold red'
+
+[[battery.display]] # 'bold yellow' style and 💦 symbol when capacity is between 10% and 30%
+threshold = 50
+style = 'bold yellow'
+discharging_symbol = '💦'
+
+# when capacity is over 50
+[[battery.display]]
+threshold = 100
+style = 'bold green'
+
+[directory]
+truncation_length = 1
+home_symbol = '🏠 '
